@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+     body{
+        background-color : #fff5d7;
+        margin: 0 auto;
+      }   
+     h2{
+       color : #ffb766;
+       text-align : center;
+       font-family: "SIMPSON";
+        margin: 0 auto;
+     }
+    form{
+       background-color : #e1b382;
+       align:"center";
+       text-align : center;
+       width: 300px;
+       margin: 0 auto;
+     }
+  </style>
+</head>
+
+<body>
+ <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+     <div class="wrapper wrapper--w790">
+         <div class="card card-5">
+            <div class="card-heading"><br><br>
+ 	            <h2>Car Performance Prediction</h2>
+ 	         </div><br><br>
+	         <div class="card-body">
+	             <form action="{{ url_for('y_predict')}}"method="post">
+	                <div class="form-row">
+	                  <div class="name">Number of Cylinders</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Number of Cylinders" id="Number of Cylinders" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Displacement</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Displacement" id="Displacement" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Horsepower</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Horsepower" id="Horsepower" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Weight</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Weight" id="Weight" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Acceleration</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Acceleration" id="Acceleration" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Model Year</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Model Year" id="Model Year" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div>
+	                <div class="form-row">
+	                  <div class="name">Origin</div>
+	                  <div class="value">
+	                      <div class="input-group">
+	                         <input class="input--style-5" type="text" name="Origin" id="Origin" required="required"/>
+	                       </div>
+	                  </div>  
+	                </div><br><br>
+	                <button type="submit" class="btn btn-primary btn-block  btn-large">Predict</button><br>
+	             </form>     
+	              <br><br> 
+        {{ prediction_text }}     
+	    </div>             
+	  </div>            
+   </div>       
+ </div>    
+</body>
+</html>   
+	                
+	       
+
